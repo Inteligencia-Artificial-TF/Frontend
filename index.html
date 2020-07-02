@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/switch.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="icon" href="assets/favicon.ico">
+    <title>Recomendación de dietas</title>
+</head>
+<body>
+<header>
+    <h3>Recomendación de dietas</h3>
+</header>
+<main>
+    <div class="symptom-container">
+        <h4>Sintomas
+        <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#symptoms"
+                aria-expanded="true" aria-controls="symptoms">
+            Seleccionar
+        </button>
+        </h4>
+        <br/>
+        <div class="collapse show" id="symptoms">
+            <div id="disease-selector" class="columns"></div>
+        <div class="col-md-12">
+            <button class="btn btn-light float-right" type="button" onclick="makeRequest()"  data-toggle="collapse" data-target="#symptoms">Recomendar</button>
+        </div>
+        </div>
+    </div>
+
+    <hr/>
+    <h4>Recomendaciones</h4>
+    <div class="rec-container">
+        <div id="recommendations" class="grid"></div>
+    </div>
+
+</main>
+<footer>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="assets/vendor/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+<script src="assets/js/symptoms.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

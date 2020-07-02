@@ -1,0 +1,68 @@
+body{
+    width: 100%;
+}
+
+header h3 {
+    margin-top: 40px;
+    text-align: center;
+    font-family: Helvetica;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+main {
+    margin: 0px 10% 0px 10%;
+}
+
+.symptom-container {
+}
+
+.col-md-12 {
+    height: 55px;
+    padding-top: 9px; /*Visual improvement ;)*/
+}
+
+#symptoms {
+    background-color: #f8f9fa;
+    padding: 20px 30px;
+    margin: 10px 10px;
+    border-radius: 20px;
+    background: linear-gradient(225deg, #dfe0e1, #ffffff);
+    box-shadow:  -20px 20px 60px #d3d4d5,
+    20px -20px 60px #ffffff;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, max-content));
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.columns {
+    -webkit-column-count: 1;  /* Chrome, Safari, Opera */
+    -moz-column-count: 1;     /* Firefox */
+    column-count: 1;
+ }
+
+@media only screen and (min-width: 768px) {
+    .columns {
+        -webkit-column-count: 2;  /* Chrome, Safari, Opera */
+        -moz-column-count: 2;     /* Firefox */
+        column-count: 2;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .columns {
+        -webkit-column-count: 3;  /* Chrome, Safari, Opera */
+        -moz-column-count: 3;     /* Firefox */
+        column-count: 3;
+    }
+}
+
+.columns + .columns {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid;
+}
