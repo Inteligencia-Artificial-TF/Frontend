@@ -14,7 +14,6 @@ function retrieve() {
 
 function makeRequest() {
     const data = retrieve();
-
     fetch('http://localhost:5000/dieta', {
             method: 'POST',
             headers: {
@@ -22,10 +21,12 @@ function makeRequest() {
             },
             body: JSON.stringify({data}),
         })
-        .then(response => console.log('R1', response))
-        .then(res => fillResults(res))
+        .then(res => res.json())
         .catch((error) => {
             console.error('Error:', error);
+        })
+        .then(res=>{
+        	fillResults(res)
         });
 }
 
